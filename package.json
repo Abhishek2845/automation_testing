@@ -9,6 +9,6 @@
   "author": "Abhishek Yadav",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.7.0"
+    "cypress": "^10.8.0"
   }
 }
