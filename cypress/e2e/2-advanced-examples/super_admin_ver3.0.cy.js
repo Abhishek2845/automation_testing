@@ -12,6 +12,7 @@ describe('Creating the study', () => {
 
         cy.get('button').click()
 
+
         cy.wait(2000)
 
         cy.contains("Study Management").click()
@@ -20,7 +21,7 @@ describe('Creating the study', () => {
 
         cy .contains("Add Study").click()
 
-        cy.wait(2000)
+        cy.wait(3000)
 
         cy.get('input[name=study_id]').should('be.visible').should('be.enabled').type("STD123")
 
