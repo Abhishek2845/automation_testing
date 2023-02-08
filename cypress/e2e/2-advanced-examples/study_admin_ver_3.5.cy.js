@@ -2,8 +2,8 @@
 describe('login_page', function () {
   
     it("Login into the Radxup Super Admin", () => {
-      cy.visit("https://radxup-uat.azurewebsites.net/");
-      cy.get("#formBasicEmail").type("abhi10@yopmail.com");
+      cy.visit("https://radxup-colectiv-uat.azurewebsites.net");
+      cy.get("#formBasicEmail").type("abhishek@yopmail.com");
       cy.wait(3000);
       cy.get('[type="submit"]').click();
     
