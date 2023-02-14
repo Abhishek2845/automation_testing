@@ -57,26 +57,60 @@ describe('Creating the study', () => {
 
       
        cy.wait (2000)
-       
-       cy.get('[type="checkbox"]').check()
+      
+    // Cde to collect grid
 
-       describe('Checkboxes', () => {
-        beforeEach(() => {
-          
-        })
-      
-        it('checks all checkboxes with one command', () => {
-          cy.get('#flexCheckDefault input[type="checkbox"]')
-            .as('checkboxes')
-            .check()
-      
-          cy.get('#flexCheckDefault')
-            .each(checkbox => {
-              expect(checkbox[151].checked ).to.equal(true).check()
-            })
-        })
-      })  
-       //cy.get('.form-check-input:checked[type=checkbox]').check()
+     
+
+    cy.get('input[type="checkbox"]')
+     .each(($elem, index) => {
+       if(index === 0) {
+        cy.wrap($elem).click({force:true});  
+       } else if (index === 3 ) {
+        cy.wrap($elem).click({force:true});
+       } else if ( index === 17) {
+        cy.wrap($elem).click({force:true});
+       }else if ( index === 44){
+        cy.wrap($elem).click({force:true});
+       } else if ( index === 62){
+        cy.wrap($elem).click({force:true});
+       }else if (index ===73){
+        cy.wrap($elem).click({force:true});
+       }else if (index === 80){
+        cy.wrap($elem).click({force:true});
+       }else if ( index === 93){
+        cy.wrap($elem).click({force:true});
+       }    
+  });
+
+ cy.contains("Next").click()
+
+   cy.wait (2000)
+// CDE to shair grid 
+   cy.get('input[type="checkbox"]')
+   .each(($elem, index) => {
+     if(index === 0) {
+      cy.wrap($elem).click({force:true});  
+     }else if (index === 3) {
+      cy.wrap($elem).click({force:true});
+     } else if (index === 17){
+      cy.wrap($elem).click({force:true});
+     } else if (index === 44 )
+     cy.wrap($elem).click({force:true});
     })
+
+    cy.wait(2000)
+
+    cy.contains("Next").click()
+
+    cy.wait(2000)
+
+    cy.get('.form-control').type("abhishek@yopmail.com")
+
+    cy.wait(2000)
+
+    cy.contains("Next").click()
+
+     })
     
   })
