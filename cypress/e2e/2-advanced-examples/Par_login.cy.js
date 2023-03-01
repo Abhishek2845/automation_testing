@@ -34,30 +34,29 @@ it('login_page!', function () {
 
   })
 
+
 describe('lpogin_page', function () {
 
   it('participant_screen', function () {
 
     cy.wait(2000)
 
-   
-
     cy.wait(2000)
 
-    cy.visit('https://radxup-colectiv-uat.azurewebsites.net/study-brief')
+    cy.visit('https://radxup-colectiv-uat.azurewebsites.net/study-brief').click()
 
     cy.wait(3000)
 
-    cy.visit('https://radxup-colectiv-uat.azurewebsites.net/current-forms')
+    // cy.visit('https://radxup-colectiv-uat.azurewebsites.net/current-forms') .click()
 
-    cy.wait(3000)
+    // cy.wait(3000)
 
-     cy.visit('https://radxup-colectiv-uat.azurewebsites.net/complete-forms')
+    //  cy.visit('https://radxup-colectiv-uat.azurewebsites.net/complete-forms').click
 
-    cy.wait(3000)
+    // cy.wait(3000)
 
-    cy.get("https://radxup-colectiv-uat.azurewebsites.net/invitations").click()
+    // cy.get("https://radxup-colectiv-uat.azurewebsites.net/invitations").click()
 
 
-})
+  })
 })
