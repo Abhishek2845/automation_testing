@@ -27,10 +27,7 @@ describe('email_login' , function(){
         cy.wait(2000)
 
         cy.get('.form-select').click()
-        // .select('Adult e-ICF ', { force: true })
-        // .invoke('val')
-        // .should('eq', 'Adult e-ICF ')
-
+        
     })
 
 })

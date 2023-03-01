@@ -44,9 +44,7 @@ describe('login', function () {
 
         cy.wait(4000)
 
-        cy.wait(2000)
-
-        cy.get('.ms-3 > .admin_panel_button').click()
+        cy.get('#tiny-react_38938411621677670630700_ifr').type('Abhishek Yadav') 
     })
 
 

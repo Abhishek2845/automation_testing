@@ -2,29 +2,17 @@ describe('Creating the study', () => {
    it('Super_admin!', () => {
 
       cy.visit('https://radxup-colectiv-uat.azurewebsites.net/')
-
       cy.title().should('eq', 'Home | RADxUP.')
-
       cy.get('.form-control').type("var17@duke.edu")
-
       cy.wait(1000)
-
       cy.get('button').click()
-
       cy.wait(4000)
-
       cy.contains('Study Management').click()
-
       cy.wait(2000)
-
       cy.contains('Add Study').click()
-
       cy.wait(1000)
-
       cy.get('input[name="study_id"]').should('be.visible').should('be.enabled').type("Colds and Flu02")
-
       cy.wait(1000)
-
       cy.get('input[name=name]').should('be.visible').should('be.enabled').type("Colds and Flu")
 
       cy.wait(1000)
@@ -60,7 +48,7 @@ describe('Creating the study', () => {
       cy.wait(1000)
 
       cy.get('input[name="1.description"]').type("In contrast to thsey resolve within two weeks")
-      
+
       cy.contains("Next").click()
 
       cy.wait(2000)
