@@ -44,7 +44,21 @@ describe('login', function () {
 
         cy.wait(4000)
 
-        cy.get('#tiny-react_38938411621677670630700_ifr').type('Abhishek Yadav') 
+        cy.get('.tox-edit-area__iframe').then(function($iFrame){
+
+            const iFrameContent = $iFrame.contents().find('#tinymce')
+   
+              cy.wrap(iFrameContent)
+   
+               .click()
+   
+               .type('Abhishek Yadav')
+   
+          }) 
+
+          cy.wait(2000)
+
+          cy.contains("Save").click();
     })
 
 

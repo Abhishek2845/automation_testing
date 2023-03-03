@@ -20,13 +20,18 @@ describe('email_login' , function(){
 
         cy.contains("e-Informed Consent Form").click()
 
-        cy.get(4000)
+        cy.wait(5000)
 
         cy.contains("Build New e-ICF").click()
 
         cy.wait(2000)
 
-        cy.get('.form-select').click()
+       // cy.get('.form-select').click()
+       // cy.get('.form-select').select('Adult e-ICF ').should('have.value','Adult e-ICF ')
+
+
+        cy.get('input[name="icfType"]').select();
+       
         
     })
 
